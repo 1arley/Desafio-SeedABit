@@ -11,7 +11,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe({
     whitelist: true,
     forbidNonWhitelisted: true,
-    transform: true, // Importante para converter datas automagicamente
+    transform: true, // Converte as datas automaticamente
   }));
 
   // 2. Configuração do Swagger

@@ -13,8 +13,8 @@ export class EventsController {
   }
 
   @Get()
-  findAll() {
-    return this.eventsService.findAll();
+  findAll(@Param('id') id: string) {
+    return this.eventsService.findAll(+id);
   }
 
   @Get(':id')
