@@ -21,7 +21,6 @@ model User {
   phoneNumber String
   birthDate   DateTime
   events      Event[]
-  
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
@@ -33,10 +32,8 @@ model Event {
   startDateTime DateTime
   endDateTime   DateTime
   status        EventStatus @default(SCHEDULED)
-  
   userId        Int
   user          User        @relation(fields: [userId], references: [id])
-  
   createdAt     DateTime    @default(now())
   updatedAt     DateTime    @updatedAt
 }
